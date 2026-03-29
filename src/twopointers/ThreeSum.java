@@ -1,3 +1,4 @@
+package twopointers;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -29,11 +30,7 @@ public class ThreeSum {
                 int sum = nums[lo] + nums[hi];
                 if (sum == target) {
                     // pehla answer mil gya idhar
-                    List<Integer> curr = new ArrayList<>();
-                    curr.add(nums[i]);
-                    curr.add(nums[lo]);
-                    curr.add(nums[hi]);
-                    ans.add(curr);
+                    ans.add(Arrays.asList(nums[i], nums[lo], nums[hi]));
                     lo++;
                     // // duplicates handle krne hoge
                     // while (c)

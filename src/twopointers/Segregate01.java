@@ -1,3 +1,5 @@
+package twopointers;
+
 public class Segregate01 {
     public void segregate0and1(int[] arr) {
         // code here

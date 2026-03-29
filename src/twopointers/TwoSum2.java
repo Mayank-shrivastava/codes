@@ -1,3 +1,4 @@
+package twopointers;
 public class TwoSum2 {
     public int[] twoSum(int[] numbers, int target) {
         // since array is already sorted
