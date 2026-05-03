@@ -1,6 +1,18 @@
 package kadanes;
 
+import java.util.HashMap;
+import java.util.Map;
 public class MaxSumCircularSubarray {
+    public static void main(String[] args) {
+        int[] nums = {1,2,3,4};
+        System.out.println("Hello World");
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int num : nums) {
+            map.merge(num, 1, Integer::sum);
+        }
+    }
+
     public int maxSubarraySumCircular(int[] nums) {
         int i = 0, maxEndingHere = nums[0], minEndingHere = nums[0], maxSum = nums[0], minSum = nums[0];
         int totalSum = nums[0];
