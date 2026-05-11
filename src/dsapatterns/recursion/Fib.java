@@ -1,4 +1,4 @@
-package recursion;
+package dsapatterns.recursion;
 
 public class Fib {
     public int fib(int n) {

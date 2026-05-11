@@ -1,11 +1,12 @@
-package twopointers;
+package dsapatterns.twopointers;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class ThreeSum {
     public static void main(String[] args) {
-        int[] nums = {-1,0,1,2,-1,-4};    
+        int[] nums = {-1, 0, 1, 2, -1, -4};
         List<List<Integer>> ans = threeSum(nums);
         for (List<Integer> li : ans) {
             System.out.println(li);

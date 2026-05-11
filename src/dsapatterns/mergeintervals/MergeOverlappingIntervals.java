@@ -1,14 +1,14 @@
-package mergeintervals;
+package dsapatterns.mergeintervals;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class MergeOverlappingIntervals {
-     public int[][] merge(int[][] intervals) {
+    public int[][] merge(int[][] intervals) {
         List<int[]> ans = new ArrayList<>();
         // Sort array based on intervals[0][0];
-        Arrays.sort(intervals, (a,b) -> a[0]-b[0]);
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]);
         int start1 = intervals[0][0], end1 = intervals[0][1];
         for (int i = 1; i < intervals.length; i++) {
             int start2 = intervals[i][0], end2 = intervals[i][1];
@@ -21,11 +21,11 @@ public class MergeOverlappingIntervals {
                 end1 = end2;
             }
         }
-        
+
         // last interval is not added yet
-        ans.add(new int[]{start1, end1}); 
+        ans.add(new int[]{start1, end1});
 
         return ans.stream()
-            .toArray(int[][]::new);
+                .toArray(int[][]::new);
     }
 }

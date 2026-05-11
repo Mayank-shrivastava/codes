@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 public class MinInRotatedSortedArray {
     public int findMin(int[] nums) {

@@ -1,10 +1,10 @@
-package prefixsum;
+package dsapatterns.prefixsum;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 public class ShortestSubarayWIthSumAtleastK {
-    public int shortestSubarray(int[] nums, int k)  {
+    public int shortestSubarray(int[] nums, int k) {
         int n = nums.length;
         Deque<Integer> deq = new ArrayDeque<>();
         long[] prefix = new long[n];
@@ -14,7 +14,7 @@ public class ShortestSubarayWIthSumAtleastK {
             if (right == 0) {
                 prefix[right] = nums[right];
             } else {
-                prefix[right] = prefix[right-1] + nums[right];
+                prefix[right] = prefix[right - 1] + nums[right];
             }
 
             if (prefix[right] >= k) {
@@ -35,5 +35,5 @@ public class ShortestSubarayWIthSumAtleastK {
         }
 
         return result == Integer.MAX_VALUE ? -1 : result;
-    } 
+    }
 }

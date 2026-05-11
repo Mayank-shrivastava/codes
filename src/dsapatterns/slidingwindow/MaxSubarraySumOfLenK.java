@@ -1,7 +1,7 @@
-package slidingwindow;
+package dsapatterns.slidingwindow;
 
 public class MaxSubarraySumOfLenK {
-    
+
 
     class Solution {
         public int maxSubarraySum(int[] arr, int k) {

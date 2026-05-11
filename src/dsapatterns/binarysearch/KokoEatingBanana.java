@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 import java.util.Arrays;
 
@@ -9,16 +9,16 @@ public class KokoEatingBanana {
         int ans = -1;
 
         while (low <= high) {
-            int guess = (low+high)/2; // guessed k ki values
+            int guess = (low + high) / 2; // guessed k ki values
             // here guess means ki koka 1 ghante mein guess number of bananas khaegi
 
             if (canKokoEatAllBananas(piles, h, guess)) {
                 // possible answer
                 ans = guess;
                 // since i have to find min answer
-                high = guess-1;   
+                high = guess - 1;
             } else {
-                low = guess+1;
+                low = guess + 1;
             }
         }
 
@@ -31,10 +31,10 @@ public class KokoEatingBanana {
         long numberOfHrsInWhichAllPilesEaten = 0L;
         for (int i = 0; i < piles.length; i++) {
             int bananasToEat = piles[i];
-            numberOfHrsInWhichAllPilesEaten += (bananasToEat/k);
+            numberOfHrsInWhichAllPilesEaten += (bananasToEat / k);
             if (bananasToEat % k != 0) {
                 numberOfHrsInWhichAllPilesEaten += 1;
-            }  
+            }
         }
 
         //System.out.println(numberOfHrsInWhichAllPilesEaten);

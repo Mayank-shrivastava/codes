@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 public class UpperBound {
     int upperBound(int[] arr, int target) {

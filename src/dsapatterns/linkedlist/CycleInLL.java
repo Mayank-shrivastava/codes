@@ -1,4 +1,4 @@
-package linkedlist;
+package dsapatterns.linkedlist;
 
 class ListNode {
     int val;

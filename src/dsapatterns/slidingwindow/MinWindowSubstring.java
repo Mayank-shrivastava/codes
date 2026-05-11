@@ -1,15 +1,15 @@
-package slidingwindow;
+package dsapatterns.slidingwindow;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class MinWindowSubstring {
-     public String minWindow(String s, String t) {
+    public String minWindow(String s, String t) {
         Map<Character, Integer> required = new HashMap<>();
-        
+
         // freq map for the required characters for distinctions
         for (char ch : t.toCharArray()) {
-            required.put(ch, required.getOrDefault(ch,0)+1);
+            required.put(ch, required.getOrDefault(ch, 0) + 1);
         }
 
         int low = 0;
@@ -22,9 +22,9 @@ public class MinWindowSubstring {
 
         for (int high = 0; high < s.length(); high++) {
             char ch = s.charAt(high);
-            window.put(ch, window.getOrDefault(ch,0)+1); // expanding window
+            window.put(ch, window.getOrDefault(ch, 0) + 1); // expanding window
 
-            if (required.containsKey(ch) && (int)window.get(ch) == (int)required.get(ch)) {
+            if (required.containsKey(ch) && (int) window.get(ch) == (int) required.get(ch)) {
                 //  kya jo ch window mein add kiya required ka part with freq equals
                 //  if yes increase size of 
                 numberOfValidCharsInWindow++;
@@ -34,9 +34,9 @@ public class MinWindowSubstring {
             // to uske baad shrinking start krna hai 
 
             while (numberOfValidCharsInWindow == numberOfValidCharsActual) {
-                
+
                 // potential answer calculation
-                int currLen = high-low+1;
+                int currLen = high - low + 1;
                 if (currLen < minLen) {
                     minLen = currLen;
                     System.out.println(minLen);
@@ -45,11 +45,11 @@ public class MinWindowSubstring {
 
                 // shrink
                 char lowChar = s.charAt(low);
-                window.put(lowChar, window.get(lowChar)-1); 
+                window.put(lowChar, window.get(lowChar) - 1);
 
                 // since shrinking happend formed could change
-                if (required.containsKey(lowChar) && (int)window.get(lowChar)
-                        < (int)required.get(lowChar)) {
+                if (required.containsKey(lowChar) && (int) window.get(lowChar)
+                        < (int) required.get(lowChar)) {
                     numberOfValidCharsInWindow--;
                 }
 
@@ -58,7 +58,7 @@ public class MinWindowSubstring {
         }
 
         //System.out.println(minLen + " " + start);
-        
+
         return minLen == Integer.MAX_VALUE ? "" : s.substring(start, start + minLen);
     }
 }

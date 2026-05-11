@@ -1,4 +1,4 @@
-package recursion;
+package dsapatterns.recursion;
 
 public class IsPalindrome {
     boolean isPalindrome(String s) {

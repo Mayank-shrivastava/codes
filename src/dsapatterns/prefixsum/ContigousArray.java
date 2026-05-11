@@ -1,11 +1,11 @@
-package prefixsum;
+package dsapatterns.prefixsum;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ContigousArray {
     public int findMaxLength(int[] nums) {
-        Map<Integer,Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         int zero = 0, one = 0, n = nums.length, res = 0;
         for (int i = 0; i < n; i++) {
             if (nums[i] == 0) zero++;
@@ -13,7 +13,7 @@ public class ContigousArray {
 
             int diff = zero - one;
             if (diff == 0) {
-                res = Math.max(res, i+1);
+                res = Math.max(res, i + 1);
                 continue;
             }
 

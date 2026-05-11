@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 public class FirstAndLastPosition {
     public int[] searchRange(int[] nums, int target) {

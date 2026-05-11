@@ -1,4 +1,4 @@
-package twopointers;
+package dsapatterns.twopointers;
 
 public class Segregate01 {
     public void segregate0and1(int[] arr) {

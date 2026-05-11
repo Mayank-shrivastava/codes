@@ -1,4 +1,4 @@
-package stackqueue;
+package dsapatterns.stackqueue;
 
 import java.util.ArrayDeque;
 
@@ -22,7 +22,7 @@ public class RemoveDuplicates {
         }
 
         StringBuilder sb = new StringBuilder();
-        while(!st.isEmpty()) {
+        while (!st.isEmpty()) {
             // char top = st.peek();
             // sb.append(top);
             // st.pop();

@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 public class Classic {
     public int search(int[] nums, int target) {

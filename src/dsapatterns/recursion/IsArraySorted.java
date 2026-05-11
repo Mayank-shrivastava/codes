@@ -1,4 +1,4 @@
-package recursion;
+package dsapatterns.recursion;
 
 public class IsArraySorted {
     public boolean isSorted(int[] arr) {

@@ -1,9 +1,9 @@
-package mergeintervals;
+package dsapatterns.mergeintervals;
 
 import java.util.Arrays;
 
 public class MeetingRoom {
-     public int minMeetingRooms(int[] start, int[] end) {
+    public int minMeetingRooms(int[] start, int[] end) {
         // code here
         Arrays.sort(start);
         Arrays.sort(end);
@@ -18,8 +18,8 @@ public class MeetingRoom {
                 j++;
             }
         }
-        
+
         return res;
-        
+
     }
 }

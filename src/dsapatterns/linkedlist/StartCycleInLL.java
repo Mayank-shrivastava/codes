@@ -1,4 +1,4 @@
-package linkedlist;
+package dsapatterns.linkedlist;
 
 public class StartCycleInLL {
     // “After meeting, reset one pointer to head — move both at same speed — where
@@ -22,5 +22,10 @@ public class StartCycleInLL {
         }
 
         return null;
+    }
+
+    static class ListNode {
+        int data;
+        ListNode next;
     }
 }

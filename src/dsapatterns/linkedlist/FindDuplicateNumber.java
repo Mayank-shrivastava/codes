@@ -1,4 +1,4 @@
-package linkedlist;
+package dsapatterns.linkedlist;
 
 public class FindDuplicateNumber {
     public int findDuplicate(int[] nums) {

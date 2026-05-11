@@ -1,8 +1,8 @@
-package kadanes;
+package dsapatterns.kadanes;
 
 public class MaxSubarraySum {
     public static void main(String[] args) {
-        
+
     }
 
     public static int maxSubarraySum(int[] arr, int n) {
@@ -17,5 +17,5 @@ public class MaxSubarraySum {
 
 
         return ans;
-    } 
+    }
 }

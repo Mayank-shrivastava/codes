@@ -1,4 +1,4 @@
-package linkedlist;
+package dsapatterns.linkedlist;
 
 public class MiddleOfLL {
     public ListNode middleNode(ListNode head) {
@@ -9,5 +9,10 @@ public class MiddleOfLL {
         }
 
         return slow;
+    }
+
+    static class ListNode {
+        int data;
+        ListNode next;
     }
 }

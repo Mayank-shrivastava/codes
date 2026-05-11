@@ -1,4 +1,4 @@
-package stackqueue;
+package dsapatterns.stackqueue;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
@@ -16,7 +16,7 @@ public class ReverseString {
 
         StringBuilder sb = new StringBuilder();
 
-        while(!stack.isEmpty()) {
+        while (!stack.isEmpty()) {
             sb.append(stack.pop());
         }
 

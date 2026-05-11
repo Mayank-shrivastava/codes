@@ -1,4 +1,5 @@
-package twopointers;
+package dsapatterns.twopointers;
+
 public class SortColors {
-    
+
 }

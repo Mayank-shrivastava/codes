@@ -1,4 +1,4 @@
-package recursion;
+package dsapatterns.recursion;
 
 public class RemoveOccurenceOfChar {
     public void removeCharacter(StringBuilder s, char c) {

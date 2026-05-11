@@ -1,9 +1,9 @@
-package stackqueue;
+package dsapatterns.stackqueue;
 
 import java.util.ArrayDeque;
 
 public class ValidParenthesis {
-     public boolean isValid(String s) {
+    public boolean isValid(String s) {
         int n = s.length();
         ArrayDeque<Character> st = new ArrayDeque<>();
         for (int i = 0; i < n; i++) {

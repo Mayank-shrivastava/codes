@@ -1,12 +1,12 @@
-package stackqueue;
+package dsapatterns.stackqueue;
 
 import java.util.ArrayDeque;
 
 public class RemoveAllAdjacentDuplicates {
-     public String removeDuplicates(String s, int k) {
+    public String removeDuplicates(String s, int k) {
         ArrayDeque<Pair> st = new ArrayDeque<>();
 
-        for (char c: s.toCharArray()) {
+        for (char c : s.toCharArray()) {
             if (!st.isEmpty() && st.peek().ch == c) {
                 st.peek().count++; // increase the counter
                 if (st.peek().count == k) { // remove k duplicates
@@ -18,7 +18,7 @@ public class RemoveAllAdjacentDuplicates {
         }
 
         StringBuilder sb = new StringBuilder();
-        while(!st.isEmpty()) {
+        while (!st.isEmpty()) {
             Pair top = st.peek();
             for (int i = 0; i < top.count; i++) {
                 sb.append(top.ch);

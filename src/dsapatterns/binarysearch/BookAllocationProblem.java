@@ -1,9 +1,9 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 public class BookAllocationProblem {
 
     public static void main(String[] args) {
-        int[] arr = {15, 10,19, 10, 5, 18, 7};
+        int[] arr = {15, 10, 19, 10, 5, 18, 7};
         int k = 5;
         System.out.println(findPages(arr, k));
     }

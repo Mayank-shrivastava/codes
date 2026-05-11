@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 import java.util.Arrays;
 
@@ -7,37 +7,37 @@ public class AggressiveCows {
         // code here
         int n = stalls.length;
         Arrays.sort(stalls);
-        int low = 1, high = stalls[n-1];
+        int low = 1, high = stalls[n - 1];
         int ans = -1;
         while (low <= high) {
-            int guess = (low+high)/2;
+            int guess = (low + high) / 2;
             if (isPossibleToPlaceKCowsOnGuessedDistance(stalls, k, guess)) {
                 ans = guess;
-                low = guess+1;
+                low = guess + 1;
             } else {
-                high = guess-1;
+                high = guess - 1;
             }
         }
-        
+
         return ans;
     }
-    
-    static boolean isPossibleToPlaceKCowsOnGuessedDistance(int[] arr, 
-                int k, int d) {
-        
+
+    static boolean isPossibleToPlaceKCowsOnGuessedDistance(int[] arr,
+                                                           int k, int d) {
+
         int cows = 1;
         int prevPos = arr[0]; // first cow is placed at arr[0]
         //System.out.println("Guesed Distance " + d);
         for (int i = 1; i < arr.length; i++) {
-            int distanceBtwPrevPosCurrPos = arr[i]-prevPos;
+            int distanceBtwPrevPosCurrPos = arr[i] - prevPos;
             if (distanceBtwPrevPosCurrPos >= d) {
                 cows++;
                 prevPos = arr[i];
             }
         }
-        
+
         //System.out.println("Number Of Cows " + cows);
-        
+
         if (cows < k) return false;
         else return true;
     }

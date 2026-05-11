@@ -1,4 +1,4 @@
-package linkedlist;
+package dsapatterns.linkedlist;
 
 public class HappyNumber {
     public boolean isHappy(int n) {

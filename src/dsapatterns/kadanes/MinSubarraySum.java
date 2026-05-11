@@ -1,7 +1,7 @@
-package kadanes;
+package dsapatterns.kadanes;
 
 public class MinSubarraySum {
-    
+
 
     public static int minSubarraySum(int[] arr, int n) {
         int i = 0, bestEnding = arr[i], ans = arr[i];

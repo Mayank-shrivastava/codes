@@ -1,10 +1,10 @@
-package mergeintervals;
+package dsapatterns.mergeintervals;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class IntervalListIntersection {
-     public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
+    public int[][] intervalIntersection(int[][] firstList, int[][] secondList) {
         List<int[]> res = new ArrayList<>();
         int i = 0, j = 0, n = firstList.length, m = secondList.length;
         while (i < n && j < m) {
@@ -16,21 +16,21 @@ public class IntervalListIntersection {
                     // overlapping
                     int s = Math.max(start1, start2);
                     int e = Math.min(end1, end2);
-                    res.add(new int[]{s,e});
-                } 
+                    res.add(new int[]{s, e});
+                }
             } else {
                 if (end2 >= start1) {
                     int s = Math.max(start1, start2);
                     int e = Math.min(end1, end2);
                     //System.out.println(s + " " + e);
                     //if (s == 5 && e == 5) System.out.println(s + " " + e);
-                    res.add(new int[]{s,e});
+                    res.add(new int[]{s, e});
                 }
             }
 
-            if (end1 <= end2) 
+            if (end1 <= end2)
                 i++;
-            else 
+            else
                 j++;
         }
 

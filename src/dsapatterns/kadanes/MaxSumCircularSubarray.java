@@ -1,10 +1,11 @@
-package kadanes;
+package dsapatterns.kadanes;
 
 import java.util.HashMap;
 import java.util.Map;
+
 public class MaxSumCircularSubarray {
     public static void main(String[] args) {
-        int[] nums = {1,2,3,4};
+        int[] nums = {1, 2, 3, 4};
         System.out.println("Hello World");
 
         Map<Integer, Integer> map = new HashMap<>();

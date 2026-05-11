@@ -1,11 +1,11 @@
-package prefixsum;
+package dsapatterns.prefixsum;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class SubarraySumDivisibleByK {
     public int subarraysDivByK(int[] nums, int k) {
-        Map<Integer,Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
         int sum = 0, count = 0;
         for (int i = 0; i < nums.length; i++) {
@@ -18,5 +18,5 @@ public class SubarraySumDivisibleByK {
         //System.out.println(map);
         return count;
     }
-    
+
 }

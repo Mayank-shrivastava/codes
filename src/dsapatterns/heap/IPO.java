@@ -1,4 +1,4 @@
-package heap;
+package dsapatterns.heap;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -6,14 +6,14 @@ import java.util.List;
 import java.util.PriorityQueue;
 
 public class IPO {
-     public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {
+    public int findMaximizedCapital(int k, int w, int[] profits, int[] capital) {
         int n = profits.length;
         List<Pair> proj = new ArrayList<>();
         for (int i = 0; i < n; i++) {
             proj.add(new Pair(capital[i], profits[i]));
         }
 
-        proj.sort((a,b) -> a.capital-b.capital);
+        proj.sort((a, b) -> a.capital - b.capital);
 
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Collections.reverseOrder());
 

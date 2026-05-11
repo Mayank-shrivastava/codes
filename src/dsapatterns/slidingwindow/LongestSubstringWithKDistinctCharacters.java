@@ -1,4 +1,4 @@
-package slidingwindow;
+package dsapatterns.slidingwindow;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,16 +10,16 @@ public class LongestSubstringWithKDistinctCharacters {
     }
 
 
-      public static int longestKSubstr(String s, int k) {
+    public static int longestKSubstr(String s, int k) {
         // code here
-        
-        Map<Character,Integer> map = new HashMap<>();
-        int lo = 0, hi= 0, n = s.length();
+
+        Map<Character, Integer> map = new HashMap<>();
+        int lo = 0, hi = 0, n = s.length();
         int res = -1;
         for (hi = 0; hi < n; hi++) {
-            
+
             map.put(s.charAt(hi), map.getOrDefault(s.charAt(hi), 0) + 1); // add information
-            
+
             while (map.size() > k) {
                 // shrinking
                 map.put(s.charAt(lo), map.get(s.charAt(lo)) - 1);
@@ -28,9 +28,9 @@ public class LongestSubstringWithKDistinctCharacters {
                 }
                 System.out.println("LO" + lo);
                 lo++;
-                
+
             }
-            
+
             // exactly ki wajah se compare krna padega
             if (map.size() == k) {
                 int len = hi - lo + 1;
@@ -38,7 +38,7 @@ public class LongestSubstringWithKDistinctCharacters {
             }
             System.out.println(hi);
         }
-        
+
         return res;
     }
 }

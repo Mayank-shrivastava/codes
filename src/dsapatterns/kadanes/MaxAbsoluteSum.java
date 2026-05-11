@@ -1,8 +1,8 @@
-package kadanes;
+package dsapatterns.kadanes;
 
 public class MaxAbsoluteSum {
     public static void main(String[] args) {
-        
+
     }
 
     public int maxAbsoluteSum(int[] nums) {

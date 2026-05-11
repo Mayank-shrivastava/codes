@@ -1,4 +1,4 @@
-package slidingwindow;
+package dsapatterns.slidingwindow;
 
 public class SmallestSubarrayWithGivenSum {
 

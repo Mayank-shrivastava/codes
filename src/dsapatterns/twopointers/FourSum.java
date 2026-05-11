@@ -1,6 +1,8 @@
-package twopointers;
+package dsapatterns.twopointers;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class FourSum {
     public List<List<Integer>> fourSum(int[] nums, int target) {
@@ -42,7 +44,7 @@ public class FourSum {
                 }
             }
         }
-        
+
         return res;
     }
 }

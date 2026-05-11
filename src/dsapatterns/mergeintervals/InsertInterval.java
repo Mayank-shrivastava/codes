@@ -1,13 +1,13 @@
-package mergeintervals;
+package dsapatterns.mergeintervals;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class InsertInterval {
-     public int[][] insert(int[][] intervals, int[] newInterval) {
+    public int[][] insert(int[][] intervals, int[] newInterval) {
         // handle the edge case
         if (intervals.length == 0) {
-            return new int[][] {newInterval};
+            return new int[][]{newInterval};
         }
         // insert
         List<int[]> res = new ArrayList<>();
@@ -16,7 +16,7 @@ public class InsertInterval {
             if (!isInserted && intervals[i][0] >= newInterval[0]) {
                 res.add(newInterval);
                 isInserted = true;
-            } 
+            }
             res.add(intervals[i]);
         }
 

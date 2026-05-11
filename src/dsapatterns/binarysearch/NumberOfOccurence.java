@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 public class NumberOfOccurence {
     int countFreq(int[] arr, int target) {

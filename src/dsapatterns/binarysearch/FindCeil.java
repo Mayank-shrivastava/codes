@@ -1,4 +1,4 @@
-package binarysearch;
+package dsapatterns.binarysearch;
 
 public class FindCeil {
     public int findCeil(int[] arr, int x) {

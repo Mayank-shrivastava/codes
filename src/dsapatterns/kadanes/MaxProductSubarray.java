@@ -1,4 +1,4 @@
-package kadanes;
+package dsapatterns.kadanes;
 
 public class MaxProductSubarray {
 

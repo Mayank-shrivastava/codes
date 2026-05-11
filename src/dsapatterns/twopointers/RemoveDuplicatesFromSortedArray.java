@@ -1,4 +1,4 @@
-package twopointers;
+package dsapatterns.twopointers;
 
 public class RemoveDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
