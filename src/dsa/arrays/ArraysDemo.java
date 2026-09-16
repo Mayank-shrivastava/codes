@@ -33,30 +33,33 @@ public class ArraysDemo {
         }
     }
 
-    // Ques 3: Rotate the array (Right by k)
-    // arr: [1,2,3,4,5], k = 2
-    // o/p: [4,5,1,2,3]
-    // TC: O(N), SC: O(1)
+    // Ques 3: Rotate the array (Right by k) 
+    // Implementation specific pattern
+    // arr: [1,2,3,4,5] k = 2 --- o/p: [4,5,1,2,3]
+    // arr: [1,2,3,4,5] k = 2 --- o/p: [3,4,5,1,2]
+    // TC: O(N) SC: O(1)
 
+    // steps: reverse the complete array
+    // reverse first k elements
+    // reverse next elements
     static void rotateArrayRight(int[] arr, int k) {
         int n = arr.length;
         k = k % n;
-
         reverseArray(arr, 0, n - 1);
         reverseArray(arr, 0, k - 1);
         reverseArray(arr, k, n - 1);
     }
 
-
     // Ques 4: Rotate the array (Left by k)
-    // arr: [1,2,3,4,5], k = 2
-    // o/p: [3,4,5,1,2]
-    // TC: O(N), SC: O(1)
-
+    // arr: [1,2,3,4,5] k = 2 --- o/p: [3,4,5,1,2]
+    // arr: [1,2,3,4,5] k = 2 --- o/p: [4,5,1,2,3]
+    // TC: O(N) SC: O(1)
+    // reverse the first k elements
+    // reverse the next elements
+    // reverse the complete array
     static void rotateArrayLeft(int[] arr, int k) {
         int n = arr.length;
         k = k % n;
-
         reverseArray(arr, 0, k - 1);
         reverseArray(arr, k, n - 1);
         reverseArray(arr, 0, n - 1);
