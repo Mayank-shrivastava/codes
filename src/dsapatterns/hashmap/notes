@@ -1,0 +1,31 @@
+HashMaps:
+1. LC:387 first unique character in the string
+    - Create the frequency map
+    - Iterate over the string if map.get(ch) == 1 return the index
+    - If after iteration the code reaches the end return -1 that means no unique character
+    - TC: O(N) SC: O(N)
+
+2. Ransom Notes
+   - We have two strings ransom='aa' magazine='aab' we need to return true if ransom is created by magazine false if not
+   - Create [have] frequency map from magazine and [need] map from ransom
+   - Iterate over the ransom string for each character in the ransom string
+             - get the frequency of need character
+             - for the same need character get the frequency of have
+             - check if have < need return false eventually return true
+
+   - TC: O(N) SC: O(N)
+
+3. LC:1189 Max Balloons
+   - similar to ransom note but in this ques we need to find the number of times we can make the balloon string
+   - first create need -> balloon ka freq map and have -> string ka freq map
+   - ab intuition ke hisaab se we need to find out the number of times we can use a particular character
+             - for that do have[i]/need[i]
+   - after the previous step we need to find the min of all the frequencies of the balloon
+   - TC: O(n) SC: O(n)
+
+4. LC:409 Longest palindrome
+   - is question mein hme ek string de rakhi hogi hme find out krna hai max length ki palindrome string
+   - thinking start kro yaha se ki 2 tarah ki string palindrome hoskti hai even length and odd length
+   - even length ki palindrome string mein -> cabbac
+   - odd length ki palindrome string mein -> even length ki palindrome string + in between any character but odd number of times
+   - TC:O(n) SC:O(n)
